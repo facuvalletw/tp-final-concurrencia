@@ -130,6 +130,8 @@ Para correr la batería de pruebas de tiempo completa:
 
 Para correr comunicando procesos entre 2 o más máquinas por LAN o Wi-Fi:
 
+> **Opción rápida con script:** pueden automatizar todo el setup (dependencias, SSH, ruta `/tmp/tp_final`, `machinefile` y corrida) ejecutando `./red_mpi.sh preparar` en cada equipo y `./red_mpi.sh conectar usuario@IP` seguido de `./red_mpi.sh correr` desde el equipo que lanza `mpiexec`. Debajo está el detalle manual paso a paso.
+
 ### 1. Preparar todos los equipos
 1. Conectarlos a la misma red local (mismo Wi-Fi, cable de red o punto de acceso compartido).
 2. Tener instalados los paquetes de OpenMPI + SSH y compilado el proyecto (`make clean && make all`).
