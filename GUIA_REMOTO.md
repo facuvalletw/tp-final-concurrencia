@@ -2,7 +2,7 @@
 
 Cuando los equipos participantes están en redes domésticas separadas (distintos Wi-Fi o proveedores de internet), las IPs locales (`192.168.x.x`) no son alcanzables entre sí. Para conectarlos sin configurar port forwarding en el router, se puede armar una red virtual privada (VPN mesh) con **ZeroTier** o **Tailscale**.
 
-> **Atajo con script (`red_mpi.sh`):** Una vez conectados a ZeroTier/Tailscale, en vez de hacer los pasos de SSH, MTU, `machinefile` y compilación a mano, pueden usar `./red_mpi.sh preparar` en todos los equipos y `./red_mpi.sh conectar usuario@IP` + `./red_mpi.sh correr` en el equipo que lanza la prueba.
+> **Atajo con script (`red_mpi.sh`):** Una vez conectados a ZeroTier/Tailscale, en vez de hacer los pasos de SSH, MTU, `machinefile` y compilación a mano, pueden usar `./red_mpi.sh preparar` en todos los equipos y `./red_mpi.sh conectar usuario@IP` + `./red_mpi.sh correr` en el equipo que lanza la prueba. El script también instala una versión idéntica de OpenMPI (`5.0.11`) en `/tmp/tp_mpi` en cada equipo para evitar errores de `version mismatch` si usan distintas versiones de Ubuntu o Debian.
 
 ---
 
