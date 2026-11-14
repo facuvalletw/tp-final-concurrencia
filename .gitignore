@@ -1,0 +1,5 @@
+*.o
+region_labeling_seq
+region_labeling_coord
+region_labeling_nocoord
+generador_imagenes

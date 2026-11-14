@@ -1,0 +1,11 @@
+# Lista de maquinas para correr MPI en red
+# Formato: <usuario@IP> slots=<procesos> (o solo <IP> si tienen el mismo usuario)
+#
+# Ejemplo con 2 notebooks:
+# lucas@192.168.1.101 slots=2
+# juan@192.168.1.102 slots=2
+#
+# Ejecucion:
+# mpiexec --hostfile machinefile -np 4 ./region_labeling_nocoord imagenes/bloques_128.txt
+
+localhost slots=4
