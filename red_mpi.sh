@@ -248,9 +248,9 @@ correr_mpi_cmd() {
 
     cd "$WORK_DIR"
     # shellcheck disable=SC2086
-    echo "+ $MPI_PREFIX/bin/mpiexec --prefix $MPI_PREFIX --mca pml ob1 --mca btl tcp,sm,self $MCA_FLAGS --hostfile $WORK_DIR/machinefile -np $NP $*"
+    echo "+ $MPI_PREFIX/bin/mpiexec --prefix $MPI_PREFIX --bind-to none --oversubscribe --mca pml ob1 --mca btl tcp,sm,self $MCA_FLAGS --hostfile $WORK_DIR/machinefile -np $NP $*"
     # shellcheck disable=SC2086
-    "$MPI_PREFIX/bin/mpiexec" --prefix "$MPI_PREFIX" --mca pml ob1 --mca btl tcp,sm,self $MCA_FLAGS --hostfile "$WORK_DIR/machinefile" -np "$NP" "$@"
+    "$MPI_PREFIX/bin/mpiexec" --prefix "$MPI_PREFIX" --bind-to none --oversubscribe --mca pml ob1 --mca btl tcp,sm,self $MCA_FLAGS --hostfile "$WORK_DIR/machinefile" -np "$NP" "$@"
 }
 
 correr_programa() {
